@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {  
             steps {  
-                git credentialsId: 'ef1f8776-6770-486c-bcbf-22d720b6351a' url: 'https://github.com/RKDAtiles/node-webapp.git', branch: 'main'
+                git credentialsId: 'ef1f8776-6770-486c-bcbf-22d720b6351a', url: 'https://github.com/RKDAtiles/node-webapp.git', branch: 'main'
             }  
         }  
         stage('Build Docker Image') {
