@@ -1,10 +1,9 @@
 FROM node:lts-slim  
 
-WORKDIR /home/node/app  
-COPY package*.json ./  
-RUN npm install    
-COPY . .  
 EXPOSE 3000  
+WORKDIR /home/node/app  
+COPY . /home/node/app 
+RUN npm install    
 
 CMD ["npm", "start"]
 
